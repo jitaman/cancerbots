@@ -1,6 +1,3 @@
-function john_say(str)
-	print(str)
-end
 
 function AbilityUsageThink()
 	

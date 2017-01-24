@@ -26,7 +26,7 @@ function Think()
 }
 
 
-	if GameTime() > 60 then
+	if GameTime() > 10 then
 		for i = 0, 11 do
 			if IsPlayerBot(i) then
 				SelectHero(i, table.remove(the_list))
