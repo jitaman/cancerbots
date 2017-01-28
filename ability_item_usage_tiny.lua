@@ -1,8 +1,8 @@
 
---local ability = require(GetScriptDirectory().."/ability_library")
+local ability = require("bots/ability_library")
 
 function AbilityUsageThink()
-
---	ability.flame(GetBot())
+	
+	ability.useOnNearestAlly(GetBot(), "tiny_toss")
 
 end

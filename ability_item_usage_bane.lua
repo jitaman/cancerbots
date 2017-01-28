@@ -1,10 +1,10 @@
---require( GetScriptDirectory().."/mode_defend_ally_generic" )
+local ability = require("bots/ability_library" )
 function AbilityUsageThink()
 	
-	print "hello"
+
+
+
 	
-	
-	
---	ability.useOnNearestAlly(GetBot(), "bane_nightmare")
+    ability.useOnNearestAlly(GetBot(), "bane_nightmare")
 
 end

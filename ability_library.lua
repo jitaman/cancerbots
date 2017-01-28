@@ -1,5 +1,8 @@
---local ability = {}
---[[
+local ability = {}
+
+function ability.hello() --test function
+	print "hello, called from the hello function"
+end
 
 function ability.flame(bot)
 	
@@ -7,6 +10,7 @@ function ability.flame(bot)
 end
 
 function ability.useOnNearestAlly(bot, abilityName)
+
 	if bot:IsUsingAbility() then
 		return
 	end
@@ -19,17 +23,13 @@ function ability.useOnNearestAlly(bot, abilityName)
 	
 	local nearbyHeroes = bot:GetNearbyHeroes(ability:GetCastRange(), false, BOT_MODE_NONE)
 	
-	for k,v in pairs(nearbyHeroes) do
-		print(k, v:GetUnitName())
-	end
 	
 	victim = nearbyHeroes[2]
 	
 	if victim ~= nil then
 		bot:Action_UseAbilityOnEntity(ability, victim)
-		flame(bot)
 	end
 end
-]]--
 
-return {}
+
+return ability
