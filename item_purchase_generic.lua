@@ -1,15 +1,15 @@
 
 
 
-local tableItemsToBuy = { 
-	
+local tableItemsToBuy = {
+
 				"item_relic",
 				"item_demon_edge"
-				
+
 			};
-			
-function hasItem(bot, itemName) 
-	
+
+function hasItem(bot, itemName)
+
 
 	for i = 0, 8 do
 		if bot:GetItemInSlot(i) ~= nil then
@@ -21,16 +21,16 @@ function hasItem(bot, itemName)
 	end
 	return false
 end
-				
+
 
 
 function ItemPurchaseThink()
-	
-	
+
+
 
 	local bot = GetBot()
 	local item
-	
+
 	if GetItemStockCount("item_courier") ~= 0 then
 		item = "item_courier"
 	elseif GetItemStockCount("item_gem") ~= 0 then
@@ -41,17 +41,16 @@ function ItemPurchaseThink()
 	else
 		item = "item_relic"
 	end
-			
-			
-	
-	
-	
+
+
+
+
+
 	bot:SetNextItemPurchaseValue(GetItemCost(item))
-	
+
 	if bot:GetGold() >= GetItemCost(item) then
-		bot:Action_PurchaseItem(item);
-		--print(item.." has been supposedly purchased")		
-			
+		bot:ActionImmediate_PurchaseItem (item);
+		--print(item.." has been supposedly purchased")
+
 	end
 end
-	
