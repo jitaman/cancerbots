@@ -21,7 +21,6 @@ function AbilityLevelUpThink()
     "special_bonus_movement_speed_15",
     "special_bonus_all_stats_15",
     "special_bonus_unique_terrorblade"
-
   }
 
 

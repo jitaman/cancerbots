@@ -7,8 +7,12 @@ function Think()
     "npc_dota_hero_techies",
     "npc_dota_hero_zuus",
     "npc_dota_hero_abyssal_underlord",
+
+
     "npc_dota_hero_tusk",
-    "npc_dota_hero_ember_spirit",
+
+		
+    "npc_dota_hero_earth_spirit",
 
     "npc_dota_hero_furion",
     "npc_dota_hero_chen",
